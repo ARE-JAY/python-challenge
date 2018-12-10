@@ -33,7 +33,7 @@ with open(bank_csv, newline="") as csvfile:
     
 
    
-    print(data)
+    #print(data)
     # The total net amount of "Profit/Losses" over the entire period
     # set variable defaults
     maxProfit = 0 
@@ -45,7 +45,6 @@ with open(bank_csv, newline="") as csvfile:
 # loop thorugh file
     for row in csv.reader(csvfile):
         total += int(row[1])
-        If int(row[1]) - priorMonth
 
 # The greatest increase in profits (date and amount) over the entire period        
         if int(row[1]) > maxProfit:
