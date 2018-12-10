@@ -5,7 +5,7 @@ import os
 import csv
 
 
-bank_csv = os.path.join("C:","/python_source_data","PyBank_budget_data.csv")
+bank_csv = os.path.join("PyBank_budget_data.csv")
 
 # Open the csv file
 
@@ -59,24 +59,13 @@ with open(bank_csv, newline="") as csvfile:
 # The average change in "Profit/Losses" between months over the entire period             
     averageMonth = int(total)/int(row_count)
     
-    
-# print results   
-  #  print(maxProfit)
-  #  print(maxLoss)
-  #  print(maxProfitMonth)
-  #  print(maxLossMonth)
-  #  print(f'Total Months: {str(row_count)}')
-  #  print(total)
-  #  print(averageMonth)
 
 print("Financial Analysis")
 print("----------------------------")
 print(f'Total Months: {str(row_count)}')
 print(f'Average Change: ${round((averageMonth),2)}')
 print(f'Greatest Increase in Profits: {str(maxProfitMonth)} ${str(maxProfit)}')
-print(f'Greatest Decrease in Profits: {str(maxLossMonth)} ${str(maxLoss)}')
-
-
+print(f'Greatest Decrease in Profits: {str(maxLossMonth)} ${str(maxLoss)}') 
 
 # Financial Analysis
 # ----------------------------
@@ -88,3 +77,14 @@ print(f'Greatest Decrease in Profits: {str(maxLossMonth)} ${str(maxLoss)}')
 
 
 # In addition, your final script should both print the analysis to the terminal and export a text file with the results.
+
+txtFile = open('PyBank.txt', 'w')
+
+txtFile.write (f'Financial Analysis'+ '\n')
+txtFile.write (f'----------------------------'+ '\n')
+txtFile.write (f'Total Months: {str(row_count)}'+ '\n')
+txtFile.write (f'Average Change: ${round((averageMonth),2)}'+ '\n')
+txtFile.write (f'Greatest Increase in Profits: {str(maxProfitMonth)} ${str(maxProfit)}'+ '\n')
+txtFile.write (f'Greatest Decrease in Profits: {str(maxLossMonth)} ${str(maxLoss)}'+ '\n')
+
+txtFile.close()
