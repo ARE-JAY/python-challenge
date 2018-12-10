@@ -61,20 +61,20 @@ with open(bank_csv, newline="") as csvfile:
     
     
 # print results   
-    print(maxProfit)
-    print(maxLoss)
-    print(maxProfitMonth)
-    print(maxLossMonth)
-    print(f"Total Months: ",str(row_count))
-    print(total)
-    print(averageMonth)
+  #  print(maxProfit)
+  #  print(maxLoss)
+  #  print(maxProfitMonth)
+  #  print(maxLossMonth)
+  #  print(f'Total Months: {str(row_count)}')
+  #  print(total)
+  #  print(averageMonth)
 
 print("Financial Analysis")
 print("----------------------------")
-print(f'Total Months:',str(row_count))
-print(f'Average Change: $',str(averageMonth))
-print(f'Greatest Increase in Profits:',str(maxProfitMonth),'($',str(maxProfit),")")
-print(f'Greatest Decrease in Profits:',str(maxLossMonth),'($',str(maxLoss),")")
+print(f'Total Months: {str(row_count)}')
+print(f'Average Change: ${round((averageMonth),2)}')
+print(f'Greatest Increase in Profits: {str(maxProfitMonth)} ${str(maxProfit)}')
+print(f'Greatest Decrease in Profits: {str(maxLossMonth)} ${str(maxLoss)}')
 
 
 
