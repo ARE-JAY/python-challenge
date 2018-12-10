@@ -5,7 +5,7 @@ import os
 import csv
 
 
-election_csv = os.path.join("C:","/python_source_data","election_data.csv")
+election_csv = os.path.join("election_data.csv")
 
 # Open the csv file
 
@@ -90,6 +90,23 @@ with open(election_csv, newline="") as csvfile:
     print(f'-------------------------')
     print(f'Winner: {winner}')
     print(f'-------------------------')
+
+
+    txtFile = open('PyPoll.txt', 'w')
+
+    txtFile.write (f'Election Results' + '\n') 
+    txtFile.write (f'-------------------------' + '\n')
+    txtFile.write (f'Total Votes: {str(totalVotes)}' + '\n')
+    txtFile.write (f'-------------------------' + '\n')
+    txtFile.write (f'{canidates[0]}: {khanVote_pct}% ({khanVote})' + '\n')
+    txtFile.write (f'{canidates[1]}: {correyVote_pct}% ({correyVote})' + '\n')
+    txtFile.write (f'{canidates[2]}: {liVote_pct}% ({liVote})' + '\n')
+    txtFile.write (f'{canidates[3]}: {otooleyVote_pct}% ({otooleyVote})' + '\n')
+    txtFile.write (f'-------------------------' + '\n')
+    txtFile.write (f'Winner: {winner}' + '\n')
+    txtFile.write (f'-------------------------' + '\n')
+
+txtFile.close()
 
 
 
